@@ -1,207 +1,355 @@
 {
 	"info": {
-		"_postman_id": "ff677f60-699c-442b-95fa-22d6406b0647",
+		"_postman_id": "15a67a7b-0908-4fa0-9d89-4083bffbbbfd",
 		"name": "Api bootcamp sena",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
 		{
-			"name": "Traerbootcamps",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "http://127.0.0.1:8000/api/bootcamps",
-					"protocol": "http",
-					"host": [
-						"127",
-						"0",
-						"0",
-						"1"
-					],
-					"port": "8000",
-					"path": [
-						"api",
-						"bootcamps"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "seleccionar bootcamp por id",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "http://127.0.0.1:8000/api/bootcamps/3",
-					"protocol": "http",
-					"host": [
-						"127",
-						"0",
-						"0",
-						"1"
-					],
-					"port": "8000",
-					"path": [
-						"api",
-						"bootcamps",
-						"3"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Crear nuevo Bootcamp",
-			"request": {
-				"method": "POST",
-				"header": [
-					{
-						"key": "Content-Type",
-						"value": "application/json",
-						"type": "default"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "{\r\n        \"name\" : \"UX devcamp\",\r\n        \"description\" : \"Frontend for Backend devs\",\r\n        \"website\" : \"UX.dev/bootcamps\",\r\n        \"phone\" : \"(444)444-444\",\r\n        \"average_rating\" : 1,\r\n        \"average_cost\" : 0,\r\n        \"user_id\" : 1\r\n    }"
+			"name": "bootcamps",
+			"item": [
+				{
+					"name": "Traerbootcamps",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/bootcamps",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"bootcamps"
+							]
+						}
+					},
+					"response": []
 				},
-				"url": {
-					"raw": "http://127.0.0.1:8000/api/bootcamps",
-					"protocol": "http",
-					"host": [
-						"127",
-						"0",
-						"0",
-						"1"
-					],
-					"port": "8000",
-					"path": [
-						"api",
-						"bootcamps"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Crear nuevo Bootcamp con errores",
-			"request": {
-				"method": "POST",
-				"header": [
-					{
-						"key": "Content-Type",
-						"value": "application/json",
-						"type": "default"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "{\r\n        \"name\" : \"UX \",\r\n        \"description\" : \"Frontend for Backend devs\",\r\n        \"website\" : \"UX.dev/bootcamps\",\r\n        \"phone\" : \"(555)555-555\",\r\n        \"average_rating\" : 1,\r\n        \"average_cost\" :\"Sin costo\",\r\n        \"user_id\" : 2\r\n    }"
+				{
+					"name": "seleccionar bootcamp por id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/bootcamps/3",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"bootcamps",
+								"3"
+							]
+						}
+					},
+					"response": []
 				},
-				"url": {
-					"raw": "http://127.0.0.1:8000/api/bootcamps",
-					"protocol": "http",
-					"host": [
-						"127",
-						"0",
-						"0",
-						"1"
-					],
-					"port": "8000",
-					"path": [
-						"api",
-						"bootcamps"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "actualizar un bootcamp por id",
-			"request": {
-				"method": "PUT",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\r\n    \r\n        \"name\": \"UX devcamp\",\r\n        \"id\": 4,\r\n        \"website\": \"UX.dev/bootcamps\"\r\n\r\n}"
+				{
+					"name": "Crear nuevo Bootcamp",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"name\" : \"UX devcamp\",\r\n        \"description\" : \"Frontend for Backend devs\",\r\n        \"website\" : \"UX.dev/bootcamps\",\r\n        \"phone\" : \"(444)444-444\",\r\n        \"average_rating\" : 1,\r\n        \"average_cost\" : 0,\r\n        \"user_id\" : 1\r\n    }"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/bootcamps",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"bootcamps"
+							]
+						}
+					},
+					"response": []
 				},
-				"url": {
-					"raw": "http://127.0.0.1:8000/api/bootcamps/4",
-					"protocol": "http",
-					"host": [
-						"127",
-						"0",
-						"0",
-						"1"
-					],
-					"port": "8000",
-					"path": [
-						"api",
-						"bootcamps",
-						"4"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "eliminar bootcamp por id",
-			"request": {
-				"method": "DELETE",
-				"header": [],
-				"url": {
-					"raw": "http://127.0.0.1:8000/api/bootcamps/9",
-					"protocol": "http",
-					"host": [
-						"127",
-						"0",
-						"0",
-						"1"
-					],
-					"port": "8000",
-					"path": [
-						"api",
-						"bootcamps",
-						"9"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Crear nuevo Bootcamp con errores",
-			"request": {
-				"method": "POST",
-				"header": [
-					{
-						"key": "Content-Type",
-						"value": "application/json",
-						"type": "default"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "{\r\n        \"name\" : \"UX \",\r\n        \"description\" : \"Frontend for Backend devs\",\r\n        \"website\" : \"UX.dev/bootcamps\",\r\n        \"phone\" : \"(555)555-555\",\r\n        \"average_rating\" : 1,\r\n        \"average_cost\" :\"Sin costo\",\r\n        \"user_id\" : 2\r\n    }"
+				{
+					"name": "Crear nuevo Bootcamp con errores",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"name\" : \"UX \",\r\n        \"description\" : \"Frontend for Backend devs\",\r\n        \"website\" : \"UX.dev/bootcamps\",\r\n        \"phone\" : \"(555)555-555\",\r\n        \"average_rating\" : 1,\r\n        \"average_cost\" :\"Sin costo\",\r\n        \"user_id\" : 2\r\n    }"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/bootcamps",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"bootcamps"
+							]
+						}
+					},
+					"response": []
 				},
-				"url": {
-					"raw": "http://127.0.0.1:8000/api/bootcamps",
-					"protocol": "http",
-					"host": [
-						"127",
-						"0",
-						"0",
-						"1"
-					],
-					"port": "8000",
-					"path": [
-						"api",
-						"bootcamps"
-					]
+				{
+					"name": "actualizar un bootcamp por id",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \r\n        \"name\": \"UX devcamp\",\r\n        \"id\": 4,\r\n        \"website\": \"UX.dev/bootcamps\"\r\n\r\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/bootcamps/4",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"bootcamps",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "eliminar bootcamp por id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/bootcamps/2",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"bootcamps",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Crear nuevo Bootcamp con errores",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"name\" : \"UX \",\r\n        \"description\" : \"Frontend for Backend devs\",\r\n        \"website\" : \"UX.dev/bootcamps\",\r\n        \"phone\" : \"(555)555-555\",\r\n        \"average_rating\" : 1,\r\n        \"average_cost\" :\"Sin costo\",\r\n        \"user_id\" : 2\r\n    }"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/bootcamps",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"bootcamps"
+							]
+						}
+					},
+					"response": []
 				}
-			},
-			"response": []
+			]
+		},
+		{
+			"name": "cursos",
+			"item": [
+				{
+					"name": "crearle curso a un bootcamp",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\" : \"JAVA Arrays\",\r\n    \"description\" : \"Data collections in JAVA\",\r\n    \"weeks\" : 9,\r\n    \"enroll_cost\" : ,\r\n    \"minimum_skill\" : \"Advanced\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/courses/1/create",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"courses",
+								"1",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener un curso por id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/courses/6",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"courses",
+								"6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener todos los cursos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/courses",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"courses"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Borrar un curso por id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/courses/2",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"courses",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar un curso con id especifico",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\" : \"JAVA Arrays\",\r\n    \"description\" : \"Data collections in JAVA\",\r\n    \"weeks\" : 2,\r\n    \"enroll_cost\" : 1650,\r\n    \"minimum_skill\" : \"advanced\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/courses/6",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"courses",
+								"6"
+							]
+						}
+					},
+					"response": []
+				}
+			]
 		}
 	]
 }
